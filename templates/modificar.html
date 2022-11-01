@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)https://www.w3schools.com/w3css/tryw3css_templates_analytics.htm# -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Modificar</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./static/w3.css">
+<link rel="stylesheet" href="./static/css">
+<!--  <link rel="stylesheet" href="./static/font-awesome.min.css">  -->
+
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+</head><body class="w3-light-grey">
+
+<!-- Top container -->
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i> &nbsp;Menu</button>
+  <span class="w3-bar-item w3-lef"> <img src="./static/logo.png" class="w3-circle w3-margin-right" style="width:36px"> </a></span>
+  <span class="w3-bar-item w3-right "> <a href="Inicio">Cerrar Sesion </a></span>
+ 
+</div>
+
+
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container w3-row">
+    <div class="w3-col s4">
+
+    </div>
+    <div class="w3-col s8 w3-bar">
+      <h5 class="text-light"><a id="nusuario"></a> </h5>
+     
+    </div>
+  </div>
+  <hr>
+  <div class="w3-center">
+    <span class="w3-bar-item w3-lef"> <img src="./static/avatar2.png" class="w3-circle w3-margin-right" style="width:200px"> </a></span>
+  </div>
+ 
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:310px;margin-top:50px;">
+
+  <body onload="CargarInfo()" id="main">
+
+   <div class="w3-onethird">
+
+    <!-- ////////////////////////////////////////////// -->
+
+    <form>
+      <div class="form-group">
+      <div class="w3-row-padding w3-center">
+        <div class="w3-one w3-center">
+          <span class="w3-bar-item w3-lef"> <img src="./static/avatar2.png" class="w3-circle w3-margin-right" style="width:56px"> </a></span>
+          <h2 class="text-light"><a id="nusuario2"></a> </h2>
+          <br>
+          <label> ID</label>
+          <input type="text" id="id" class="w3-input w3-border" placeholder="Id"/>
+          <br>
+          <label> Nombre</label>
+          <input type="text" id="nombre" class="w3-input w3-border" placeholder="Nombre"/>
+          <br>
+          <label> NickName</label>
+          <input type="text" id="nickName" class="w3-input w3-border" placeholder="NickName"/>
+          <br>
+          <label> Pasword</label>
+          <input type="text" id="password" class="w3-input w3-border" placeholder="Password"/>
+          <br>
+          
+  
+        </div>
+        <div class="form-group  w3-striped w3-bordered w3-left ">
+          <button onclick="Modificar()" type="button" class="btn btn-success "> Modificar</button>
+          <button onclick="Atras()" type="button" class="btn btn-success "> Atras</button>
+   
+      </div>   
+      </div>
+
+    </div>
+      
+    </form>
+
+<!-- Agregamos nuestros metodos onclick por cada boton que queremos -->      
+  
+</form>
+
+
+    <!-- ////////////////////////////////////////////// -->
+
+    </div>
+    
+   
+
+
+  <script>
+    var usuarioOriginal='';
+    var usuarioOriginal='';
+    var tipo=''
+ function CargarInfo(){
+          
+          var nombre = document.querySelector('#nusuario')
+          var nombre2 = document.querySelector('#nusuario2')
+          var iniciado = sessionStorage.usuario
+          nombre.innerHTML = ` ${iniciado}` 
+          nombre2.innerHTML = ` ${iniciado}` 
+          var buscar = sessionStorage.buscar
+        
+          fetch(`/MUsuario/${iniciado}`)
+
+          .then(response => response.json())
+
+          .catch(error => {
+            console.log(error)
+          })
+          .then(res => {
+
+            console.log(res)
+            usuarioOriginal=res.nickName
+            document.querySelector('#id').value = res.id
+            document.querySelector('#nombre').value = res.nombre
+            document.querySelector('#nickName').value = res.nickName
+            document.querySelector('#password').value = res.password
+            tipo=res.tipo
+
+          })
+      }
+      function Modificar(){
+        var id = document.querySelector('#id').value
+        var nombre = document.querySelector('#nombre').value
+        var nickName = document.querySelector('#nickName').value
+        var pasword = document.querySelector('#password').value
+        if (usuarioOriginal==nickName){
+          estado='0'
+
+        }else{
+          estado='1'
+
+        }
+        //Creamos un objeto como si fuera llave-valor
+        var objeto = {
+            'id':id,
+            'nombre':nombre,
+            'nickName':nickName,
+            'password':pasword,
+            'estado':estado
+        }
+        console.log(objeto)
+        
+        fetch(`/MUsuario/${ usuarioOriginal}`, {
+        method: 'PUT',
+        body: JSON.stringify(objeto), 
+        headers:{
+            'Content-Type': 'application/json'
+        } 
+        }).then(res => res.json())
+        .catch(error => {
+            console.error('Error:', error)
+            alert("Ocurrio un error ")
+        })
+        .then(response =>{
+          if (response.message == "Existe"){
+            alert("No pudes Modificar ,Usuario ya existe")
+
+          }else{
+            console.log('Success:', response);
+            sessionStorage.usuario=nickName
+            alert("Se modifico con exito")
+            location.href="Principal"
+
+          }
+
+            
+        }) 
+        
+    }
+
+
+
+    function Atras(){ 
+      location.href="Principal"
+     }
+
+
+
+  </script>
+
+
+
+
+</body>
+</html>

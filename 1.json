@@ -1,0 +1,186 @@
+[
+    {
+        "id_sticker": "1",
+        "sticker_player_name": "Lionel",
+        "sticker_player_lastname": "Messi",
+        "sticker_team": "Argentina",
+        "sticker_region": "America",
+        "sticker_image": "https://img.a.transfermarkt.technology/portrait/big/28003-1631171950.jpg?lm=1"
+    },
+    {
+        "id_sticker": "2",
+        "sticker_player_name": "Neymar",
+        "sticker_player_lastname": "Jr",
+        "sticker_team": "Brasil",
+        "sticker_region": "America",
+        "sticker_image": "https://img.a.transfermarkt.technology/portrait/big/68290-1632687616.jpg?lm=1"
+    },
+    {
+        "id_sticker": "3",
+        "sticker_player_name": "Kylain",
+        "sticker_player_lastname": "Mbappe",
+        "sticker_team": "Francia",
+        "sticker_region": "Europa",
+        "sticker_image": "https://img.a.transfermarkt.technology/portrait/big/342229-1632686046.jpg?lm=1"
+    },    
+    {
+        "id_sticker": "4",
+        "sticker_player_name": "Antoine",
+        "sticker_player_lastname": "Griezzman",
+        "sticker_team": "Francia",
+        "sticker_region": "Europa",
+        "sticker_image": "https://img.a.transfermarkt.technology/portrait/big/342229-1632686046.jpg?lm=1"
+    },
+    {
+        "id_sticker": "5",
+        "sticker_player_name": "Paul",
+        "sticker_player_lastname": "Pogba",
+        "sticker_team": "Francia",
+        "sticker_region": "Europa",
+        "sticker_image": "https://img.a.transfermarkt.technology/portrait/big/342229-1632686046.jpg?lm=1"
+    },    
+    {
+        "id_sticker": "6",
+        "sticker_player_name": "Presnel",
+        "sticker_player_lastname": "Kimpembe",
+        "sticker_team": "Francia",
+        "sticker_region": "Europa",
+        "sticker_image": "https://img.a.transfermarkt.technology/portrait/big/342229-1632686046.jpg?lm=1"
+    },
+    {
+        "id_sticker": "7",
+        "sticker_player_name": "Lautaro",
+        "sticker_player_lastname": "Martinez",
+        "sticker_team": "Argentina",
+        "sticker_region": "America",
+        "sticker_image": "https://img.a.transfermarkt.technology/portrait/big/28003-1631171950.jpg?lm=1"
+    },
+    {
+        "id_sticker": "8",
+        "sticker_player_name": "Vini",
+        "sticker_player_lastname": "Jr",
+        "sticker_team": "Brasil",
+        "sticker_region": "America",
+        "sticker_image": "https://img.a.transfermarkt.technology/portrait/big/68290-1632687616.jpg?lm=1"
+    },
+    {
+        "id_sticker": "9",
+        "sticker_player_name": "Muossa",
+        "sticker_player_lastname": "Diaby",
+        "sticker_team": "Francia",
+        "sticker_region": "Europa",
+        "sticker_image": "https://img.a.transfermarkt.technology/portrait/big/342229-1632686046.jpg?lm=1"
+    },    
+    {
+        "id_sticker": "10",
+        "sticker_player_name": "Ngolo",
+        "sticker_player_lastname": "Kante",
+        "sticker_team": "Francia",
+        "sticker_region": "Europa",
+        "sticker_image": "https://img.a.transfermarkt.technology/portrait/big/342229-1632686046.jpg?lm=1"
+    },
+    {
+        "id_sticker": "11",
+        "sticker_player_name": "Mateo",
+        "sticker_player_lastname": "Guendozzi",
+        "sticker_team": "Francia",
+        "sticker_region": "Europa",
+        "sticker_image": "https://img.a.transfermarkt.technology/portrait/big/342229-1632686046.jpg?lm=1"
+    },    
+    {
+        "id_sticker": "12",
+        "sticker_player_name": "Hugo",
+        "sticker_player_lastname": "Lloris",
+        "sticker_team": "Francia",
+        "sticker_region": "Europa",
+        "sticker_image": "https://img.a.transfermarkt.technology/portrait/big/342229-1632686046.jpg?lm=1"
+    },
+    {
+        "id_sticker": "13",
+        "sticker_player_name": "Dibu",
+        "sticker_player_lastname": "Martinez",
+        "sticker_team": "Argentina",
+        "sticker_region": "America",
+        "sticker_image": "https://img.a.transfermarkt.technology/portrait/big/28003-1631171950.jpg?lm=1"
+    },
+    {
+        "id_sticker": "14",
+        "sticker_player_name": "Thiago",
+        "sticker_player_lastname": "Silva",
+        "sticker_team": "Brasil",
+        "sticker_region": "America",
+        "sticker_image": "https://img.a.transfermarkt.technology/portrait/big/68290-1632687616.jpg?lm=1"
+    },
+    {
+        "id_sticker": "15",
+        "sticker_player_name": "Rodrigo",
+        "sticker_player_lastname": "de Paul",
+        "sticker_team": "Argentina",
+        "sticker_region": "America",
+        "sticker_image": "https://img.a.transfermarkt.technology/portrait/big/28003-1631171950.jpg?lm=1"
+    },
+    {
+        "id_sticker": "16",
+        "sticker_player_name": "Ederson",
+        "sticker_player_lastname": "Moraes",
+        "sticker_team": "Brasil",
+        "sticker_region": "America",
+        "sticker_image": "https://img.a.transfermarkt.technology/portrait/big/68290-1632687616.jpg?lm=1"
+    },
+    {
+        "id_sticker": "17",
+        "sticker_player_name": "Antohy",
+        "sticker_player_lastname": "Moraes",
+        "sticker_team": "Brasil",
+        "sticker_region": "America",
+        "sticker_image": "https://img.a.transfermarkt.technology/portrait/big/68290-1632687616.jpg?lm=1"
+    },
+    {
+        "id_sticker": "18",
+        "sticker_player_name": "Ronaldinhio",
+        "sticker_player_lastname": "Moreira",
+        "sticker_team": "Brasil",
+        "sticker_region": "America",
+        "sticker_image": "https://img.a.transfermarkt.technology/portrait/big/68290-1632687616.jpg?lm=1"
+    },
+    {
+        "id_sticker": "19",
+        "sticker_player_name": "Ronaldo",
+        "sticker_player_lastname": "Nazairo",
+        "sticker_team": "Brasil",
+        "sticker_region": "America",
+        "sticker_image": "https://img.a.transfermarkt.technology/portrait/big/68290-1632687616.jpg?lm=1"
+    },
+    {
+        "id_sticker": "20",
+        "sticker_player_name": "Casemiro",
+        "sticker_player_lastname": "Santos",
+        "sticker_team": "Brasil",
+        "sticker_region": "America",
+        "sticker_image": "https://img.a.transfermarkt.technology/portrait/big/68290-1632687616.jpg?lm=1"
+    },
+    {
+        "id_sticker": "21",
+        "sticker_player_name": "Wesley",
+        "sticker_player_lastname": "Fofana",
+        "sticker_team": "Francia",
+        "sticker_region": "Europa",
+        "sticker_image": "https://img.a.transfermarkt.technology/portrait/big/342229-1632686046.jpg?lm=1"
+    },    
+    {
+        "id_sticker": "22",
+        "sticker_player_name": "Chris",
+        "sticker_player_lastname": "Nkunku",
+        "sticker_team": "Francia",
+        "sticker_region": "Europa",
+        "sticker_image": "https://img.a.transfermarkt.technology/portrait/big/342229-1632686046.jpg?lm=1"
+    },
+    {
+        "id_sticker": "23",
+        "sticker_player_name": "Karim",
+        "sticker_player_lastname": "Benzema",
+        "sticker_team": "Francia",
+        "sticker_region": "Europa",
+        "sticker_image": "https://img.a.transfermarkt.technology/portrait/big/342229-1632686046.jpg?lm=1"
+    }   
+]

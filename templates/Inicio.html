@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)https://www.w3schools.com/w3css/tryw3css_templates_analytics.htm# -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Inicio</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./static/w3.css">
+<link rel="stylesheet" href="./static/css">
+<link rel="stylesheet" href="./static/nicepage.css" media="screen">
+
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+</head><body class="w3-light-grey">
+
+<!-- Top container -->
+<div class="w3-bar w3-top w3-black w3-large " style="z-index:4">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i> &nbsp;Menu</button>
+  <span class="w3-bar-item w3-lef"> <img src="./static/logo.png" class="w3-circle w3-margin-right" style="width:36px"> </a></span>
+  <span class="w3-bar-item w3-center "> <a > </a></span>
+ 
+  <span class="w3-bar-item w3-right">  </a></span>
+</div>
+
+
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left " style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container w3-row  ">
+    
+  <div class="w3-container ">
+    <div class="w3-panel w3-padding-32  " style="background-color: rgba(215, 208, 208 );  border-radius: 15px; box-shadow:0 1px 0 #ffffffbb ">
+      <div class="row ">
+    <div class="col-md-offset-5 col-md-4 text-center ">
+      
+      <h4 class='text-white w3-center ' style="font-family: 'Dancing Script', cursive!important">LOGIN</h4>
+        <div class="form-login w3-center  ">
+          <br>
+      
+        <label  style="font-family: 'Dancing Script', cursive!important"  >USUARIO</label>
+        <input id="usuario" type="text" class="form-control" placeholder="User Name">
+        </br></br>
+        <label style="font-family: 'Dancing Script', cursive!important" >PASWORD</label>
+        <input id="pasword" type="password" class="form-control" placeholder="Password">
+        </br></br>
+        <div class="wrapper">
+            <span class="group-btn">
+                <button onclick="IniciarSesion()"type="button"  class="btn btn-danger btn-" > SIGUIENTE </button>
+            </span>
+            <span class="group-btn">
+                <button onclick="Registrarse()" type="button" class="btn btn-danger btn- "> REGISTRAR </button>
+
+                <br>
+                <br>
+                
+                <br>
+              
+            </span>
+        </div>
+                  
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <audio controls src="./static/bamboo.mp3"></audio>
+
+
+
+    
+  </div> 
+</nav>
+
+
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" id="titulo" style="margin-left:310px;margin-top:50px; background-color: rgb(133, 7, 7);">
+<img src="./static/fondomundial2.jpg">
+</div>
+
+
+
+  <script>
+    var tituloa=''
+  
+      
+      function IniciarSesion(){
+      
+      var username = document.querySelector('#usuario').value
+      var password = document.querySelector('#pasword').value
+      var objeto = {
+          'user_nickname': username,
+          'user_password': password
+      }
+      console.log(objeto)
+      fetch('/Login', {
+        
+      method: 'POST', 
+      
+      body: JSON.stringify(objeto), 
+      headers:{
+          'Content-Type': 'application/json'
+      }
+     
+      }).then(res => res.json())
+      .catch(err => {
+      console.error('Error:', err)
+      alert("Ocurrio un error, ver la consola")
+      })
+      .then(response =>{
+       
+      console.log(response);
+      console.log(response.message)
+      if(response.message == "Failed"){
+          alert("No has ingresado las credencilaes correctas")
+     
+      }else{
+          alert(`Bienvenido ${username}`)
+          sessionStorage.setItem("usuario",username)
+          location.href="Principal";
+      }
+      }) 
+      }
+          function Registrarse(){
+              location.href="Registrar";
+  
+          }
+          
+
+  </script>
+
+
+
+
+</body>
+</html>
